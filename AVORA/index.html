@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AVORA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page-wipe"></div>
+
+    <!-- NAVIGATION -->
+    <header class="nav">
+
+        <button class="logo" onclick="showPage('home')">
+            AVORA
+        </button>
+
+        <nav>
+            <button onclick="showPage('home')">HOME</button>
+            <button onclick="showPage('shop')">SHOP</button>
+            <button onclick="showPage('collections')">COLLECTIONS</button>
+            <button onclick="showPage('about')">ABOUT</button>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="bag-button" onclick="toggleBag()">
+                BAG <span id="bagCount">0</span>
+            </button>
+
+            <button class="mobile-button" onclick="toggleMobile()">
+                MENU
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu">
+
+        <button onclick="showPage('home')">HOME</button>
+        <button onclick="showPage('shop')">SHOP</button>
+        <button onclick="showPage('collections')">COLLECTIONS</button>
+        <button onclick="showPage('about')">ABOUT</button>
+
+    </div>
+
+    <main>
+
+        <!-- =========================
+             HOME
+        ========================== -->
+
+        <section id="home" class="page active">
+
+            <!-- HERO -->
+
+            <section class="hero">
+
+                <div class="hero-background">
+                    <div class="hero-glow glow-red"></div>
+                    <div class="hero-glow glow-blue"></div>
+                    <div class="hero-glow glow-white"></div>
+
+                    <div class="hero-line line-a"></div>
+                    <div class="hero-line line-b"></div>
+                    <div class="hero-line line-c"></div>
+                </div>
+
+                <div class="hero-copy">
+
+                    <div class="eyebrow">
+                        AVORA / 001
+                    </div>
+
+                    <h1>
+                        MADE<br>
+                        TO BE<br>
+                        <span>SEEN.</span>
+                    </h1>
+
+                    <p>
+                        Fragrance, clothing and everyday pieces.
+                    </p>
+
+                    <button class="main-button" onclick="showPage('shop')">
+                        SHOP AVORA
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+                <!-- ANIMATED HERO OBJECT -->
+
+                <div class="hero-art">
+
+                    <div class="hero-orbit orbit-one"></div>
+                    <div class="hero-orbit orbit-two"></div>
+                    <div class="hero-orbit orbit-three"></div>
+
+                    <div class="hero-product">
+
+                        <div class="hero-product-top">
+                            AVORA
+                        </div>
+
+                        <div class="hero-product-number">
+                            01
+                        </div>
+
+                        <div class="hero-product-bottom">
+                            EAU DE PARFUM
+                        </div>
+
+                    </div>
+
+                    <div class="floating-shape shape-red"></div>
+                    <div class="floating-shape shape-blue"></div>
+                    <div class="floating-shape shape-white"></div>
+
+                </div>
+
+                <div class="hero-scroll">
+                    SCROLL
+                    <span></span>
+                </div>
+
+            </section>
+
+            <!-- INTRO -->
+
+            <section class="intro-section">
+
+                <div class="section-number">
+                    01
+                </div>
+
+                <div class="intro-content">
+
+                    <div class="eyebrow">
+                        THE BRAND
+                    </div>
+
+                    <h2>
+                        Keep it simple.<br>
+                        Make it count.
+                    </h2>
+
+                    <p>
+                        A small collection of things we actually like.
+                        Clothes, fragrance and personal care without all
+                        the extra stuff.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- FEATURED -->
+
+            <section class="featured-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <div class="eyebrow">
+                            FEATURED
+                        </div>
+
+                        <h2>
+                            Selected pieces.
+                        </h2>
+                    </div>
+
+                    <button class="line-button" onclick="showPage('shop')">
+                        VIEW SHOP →
+                    </button>
+
+                </div>
+
+                <div id="featuredProducts" class="product-grid"></div>
+
+            </section>
+
+            <!-- SECOND HERO -->
+
+            <section class="home-showcase">
+
+                <div class="showcase-orb showcase-red"></div>
+                <div class="showcase-orb showcase-blue"></div>
+
+                <div class="showcase-grid"></div>
+
+                <div class="showcase-content">
+
+                    <div class="eyebrow">
+                        AVORA / 002
+                    </div>
+
+                    <h2>
+                        GOOD<br>
+                        LOOKS<br>
+                        BETTER.
+                    </h2>
+
+                    <button
+                        class="outline-button"
+                        onclick="showPage('collections')"
+                    >
+                        VIEW COLLECTIONS
+                    </button>
+
+                </div>
+
+                <div class="showcase-card card-one">
+                    AVORA
+                </div>
+
+                <div class="showcase-card card-two">
+                    02
+                </div>
+
+            </section>
+
+            <!-- CATEGORY -->
+
+            <section class="category-section">
+
+                <div class="eyebrow">
+                    SHOP BY CATEGORY
+                </div>
+
+                <div class="category-list">
+
+                    <button onclick="openCategory('Fragrance')">
+
+                        <span>01</span>
+
+                        <strong>
+                            Fragrance
+                        </strong>
+
+                        <small>
+                            EXPLORE →
+                        </small>
+
+                    </button>
+
+                    <button onclick="openCategory('Fashion')">
+
+                        <span>02</span>
+
+                        <strong>
+                            Fashion
+                        </strong>
+
+                        <small>
+                            EXPLORE →
+                        </small>
+
+                    </button>
+
+                    <button onclick="openCategory('Self-Care')">
+
+                        <span>03</span>
+
+                        <strong>
+                            Self-Care
+                        </strong>
+
+                        <small>
+                            EXPLORE →
+                        </small>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- HOME FOOTER CTA -->
+
+            <section class="home-end">
+
+                <div class="eyebrow">
+                    AVORA
+                </div>
+
+                <h2>
+                    FIND<br>
+                    YOURS.
+                </h2>
+
+                <button
+                    class="main-button"
+                    onclick="showPage('shop')"
+                >
+                    SHOP NOW
+                    <span>→</span>
+                </button>
+
+            </section>
+
+        </section>
+
+
+        <!-- =========================
+             SHOP
+        ========================== -->
+
+        <section id="shop" class="page">
+
+            <div class="page-header">
+
+                <div class="eyebrow">
+                    AVORA / SHOP
+                </div>
+
+                <h1>
+                    SHOP.
+                </h1>
+
+                <p>
+                    Browse the current selection.
+                </p>
+
+            </div>
+
+            <div class="filters">
+
+                <button
+                    class="active"
+                    onclick="filterProducts('All', this)"
+                >
+                    ALL
+                </button>
+
+                <button
+                    onclick="filterProducts('Fragrance', this)"
+                >
+                    FRAGRANCE
+                </button>
+
+                <button
+                    onclick="filterProducts('Fashion', this)"
+                >
+                    FASHION
+                </button>
+
+                <button
+                    onclick="filterProducts('Self-Care', this)"
+                >
+                    SELF-CARE
+                </button>
+
+            </div>
+
+            <div
+                id="shopProducts"
+                class="product-grid shop-grid"
+            ></div>
+
+        </section>
+
+
+        <!-- =========================
+             COLLECTIONS
+        ========================== -->
+
+        <section id="collections" class="page">
+
+            <div class="page-header">
+
+                <div class="eyebrow">
+                    AVORA / COLLECTIONS
+                </div>
+
+                <h1>
+                    COLLECTIONS.
+                </h1>
+
+                <p>
+                    Find what fits you.
+                </p>
+
+            </div>
+
+            <div class="collection-cards">
+
+                <button
+                    onclick="openCategory('Fragrance')"
+                    class="collection-card fragrance"
+                >
+
+                    <span>
+                        01 / SCENTS
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Fragrance
+                        </h2>
+
+                        <p>
+                            Scents for every day.
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        →
+                    </strong>
+
+                </button>
+
+
+                <button
+                    onclick="openCategory('Fashion')"
+                    class="collection-card fashion"
+                >
+
+                    <span>
+                        02 / CLOTHING
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Fashion
+                        </h2>
+
+                        <p>
+                            Clean pieces. Easy fits.
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        →
+                    </strong>
+
+                </button>
+
+
+                <button
+                    onclick="openCategory('Self-Care')"
+                    class="collection-card care"
+                >
+
+                    <span>
+                        03 / CARE
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Self-Care
+                        </h2>
+
+                        <p>
+                            Keep the routine simple.
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        →
+                    </strong>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section id="about" class="page">
+
+            <div class="about-layout">
+
+                <div class="about-title">
+
+                    <div class="eyebrow">
+                        AVORA
+                    </div>
+
+                    <h1>
+                        LESS<br>
+                        NOISE.<br>
+                        MORE<br>
+                        PRESENCE.
+                    </h1>
+
+                </div>
+
+                <div class="about-copy">
+
+                    <p>
+                        AVORA is a place for things that look good,
+                        smell good, and feel right.
+                    </p>
+
+                    <p>
+                        We are keeping the collection focused.
+                        No need to overdo it.
+                    </p>
+
+                    <div class="about-line"></div>
+
+                    <span>
+                        AVORA / 2026
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- BAG OVERLAY -->
+
+    <div
+        id="bagOverlay"
+        onclick="closeBag()"
+    ></div>
+
+
+    <!-- BAG -->
+
+    <aside id="bagPanel">
+
+        <button
+            class="close-bag"
+            onclick="closeBag()"
+        >
+            ×
+        </button>
+
+        <div class="eyebrow">
+            AVORA
+        </div>
+
+        <h2>
+            YOUR BAG
+        </h2>
+
+        <div id="bagItems"></div>
+
+        <div class="bag-bottom">
+
+            <div class="bag-total">
+
+                <span>
+                    SUBTOTAL
+                </span>
+
+                <strong id="bagTotal">
+                    $0.00
+                </strong>
+
+            </div>
+
+            <button
+                class="main-button checkout-button"
+                onclick="checkout()"
+            >
+                CHECKOUT
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            AVORA
+        </div>
+
+        <div class="footer-links">
+
+            <button onclick="showPage('home')">
+                HOME
+            </button>
+
+            <button onclick="showPage('shop')">
+                SHOP
+            </button>
+
+            <button onclick="showPage('collections')">
+                COLLECTIONS
+            </button>
+
+            <button onclick="showPage('about')">
+                ABOUT
+            </button>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 AVORA
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
